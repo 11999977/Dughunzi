@@ -1,0 +1,307 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primary: #266421;
+  --secondary: #c7fcc5;
+  --tercary: #2d312d;
+}
+
+/* Début du proget DUGHUNZI */
+
+
+body{
+  height: 100vh;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+header{
+  width: 100%;
+}
+
+header nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* Première section des catégories */
+
+.categories{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  padding-top: 40px;
+}
+
+/* Style des blocs parents */
+
+.categories aside{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+}
+
+.categories aside button{
+  width: 160px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--primary);
+  background-color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  
+}
+
+.categories aside .texte{
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.categories aside .image{
+  color: var(--tercary);
+}
+.categories aside .document{
+  color: var(--tercary);
+}
+
+/* deuxième section du chois de la langue */
+
+.choix{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding-top: 40px;
+}
+
+/* Style des blocs parents */
+
+.choix aside{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choix aside button{
+  width: 160px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-size: 13px;
+  border: none;
+}
+
+.choix aside .français{
+  background-color: var(--primary);
+  /* border: 1px solid var(--primary); */
+  color: white;
+  cursor: pointer;
+}
+
+/* .choix aside .guisira{
+  color: var(--tercary);
+  cursor: pointer;
+  background-color: var(--primary);
+} */
+.choix aside .GS{
+  color: white;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+/* .choix aside .FR{
+  color: white;
+  background-color: var(--primary);
+  cursor: pointer;
+} */
+
+/* Blocs d'affichages */
+
+.affichage{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.saisira{
+  width: 543px;
+  height: 150px;
+  border-radius: 15px;
+  outline: none;
+  border: 1px solid var(--tercary);
+  
+}
+
+.saisira .saisir{
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 20px;
+  color: var(--tercary);
+  font-size: 14px;
+  font-weight:bold;
+}
+
+.affiche{
+  width: 543px;
+  height: 150px;
+  border-radius: 15px;
+  outline: none;
+  border: 1px solid var(--tercary);
+  resize: none;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.saisir::placeholder{
+  position: absolute;
+  top: 2px;
+  padding: 20px;
+  padding-left: 0;
+  font-weight: 500;
+}
+
+
+/* button traduire */
+
+.bouton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.traduire{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: var(--secondary);
+  color: var(--primary);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+  transform: scale(1);
+  
+}
+
+.traduire:hover{
+  transform: scale(1.05);
+  color: white;
+  background-color: var(--primary);
+}
+
+/* Responsive */
+
+@media (max-width: 420px)  {
+  body{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .navbar .logo{
+    width: 3rem;
+  }
+
+  .categories{
+    gap: 14px;
+    padding-top: 15px;
+
+  }
+
+  .categories aside button{
+    width: 84px;
+    height: 35px;
+    font-size: 12px;
+    
+  }
+
+  .categories aside{
+    margin: 5px;
+  }
+
+  .categories aside .texte img{
+    display: none;
+  }
+  .categories aside .image img{
+    display: none;
+  }
+  .categories aside .document img{
+    display: none;
+  }
+
+  .choix{
+    padding-top: 25px;
+  }
+
+  .choix aside button{
+    width: 80px;
+    height: 30px;
+    gap: 15px;
+    font-size: 12px;
+    border: none;
+  }
+
+  .choix aside .translate img{
+    width: 1.3rem;
+  }
+
+  .affichage{
+    margin-top: 20px;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .affiche{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+  }
+
+  .saisira{
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--tercary);
+  }
+
+  .saisira .saisir{
+    padding: 28px;
+    color: var(--tercary);
+    font-size: 14px;
+    font-weight:bold;
+  }
+
+  .saisir::placeholder{
+    padding: 10px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    left: 0;
+  }
+
+
+  
+}
